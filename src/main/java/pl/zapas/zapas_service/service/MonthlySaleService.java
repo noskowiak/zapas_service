@@ -26,14 +26,4 @@ public class MonthlySaleService {
                 .collect(Collectors.toList());
     }
 
-    public MonthlySaleDto loadMonthlyBySymbol(final String symbol) {
-        return monthlySaleMapper.toDto(monthlySaleRepository.findMonthlySaleBySymbol(symbol));
-    }
-
-   /* public String loadProductBySymbol(final String symbol) {
-        return monthlySaleRepository.findProductBySymbol(symbol)
-                .map(Product::getSymbol)
-                .orElseThrow();
-    }*/
-
 }

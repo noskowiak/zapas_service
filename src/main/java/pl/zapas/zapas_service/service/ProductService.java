@@ -21,13 +21,10 @@ public class ProductService {
         return productRepository.findAll()
                 .stream()
                 .map(product -> new ProductDto(
-                        product.getName(),
-                        product.getSymbol()))
+                        product.getSymbol(),
+                        product.getName()))
                 .collect(Collectors.toList());
     }
 
-    public Product loadProductBySymbol(final String symbol) {
-        return productRepository.findProductBySymbol(symbol);
-    }
 
 }

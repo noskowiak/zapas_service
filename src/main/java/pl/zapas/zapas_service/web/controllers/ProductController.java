@@ -25,9 +25,5 @@ private  final ProductService productService;
         return ResponseEntity.ok(productService.findAll());
     }
 
-    @GetMapping("/{symbol}")
-    public ResponseEntity<Product> getProductBySymbol(@PathVariable String symbol) {
-        return ResponseEntity.ok(productService.loadProductBySymbol(symbol));
-    }
 
 }

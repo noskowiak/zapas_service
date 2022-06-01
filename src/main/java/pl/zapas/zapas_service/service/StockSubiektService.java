@@ -26,8 +26,4 @@ public class StockSubiektService {
 
     }
 
-    public StockSubiektDto loadProductBySymbol(final String symbol) {
-        return stockSubiektMapper.toDto(stockSubiektRepository.findStockSubiektBySymbol(symbol));
-    }
-
 }

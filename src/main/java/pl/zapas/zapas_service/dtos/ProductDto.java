@@ -9,4 +9,5 @@ import lombok.Data;
 public class ProductDto {
     private String symbol;
     private String name;
+
 }

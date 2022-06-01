@@ -22,9 +22,5 @@ public class StockSubiektController {
     @GetMapping
     public ResponseEntity<List<StockSubiektDto>> gatAllStockSubiekt() {return ResponseEntity.ok(stockSubiektService.findAll());}
 
-    @GetMapping("/{symbol}")
-    public ResponseEntity<StockSubiektDto> getStockSubiektBySymbol(@PathVariable String symbol) {
-        return ResponseEntity.ok(stockSubiektService.loadProductBySymbol(symbol));
-    }
 
 }
